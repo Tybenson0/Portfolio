@@ -1,3 +1,7 @@
+html, body, .orbit-page {
+    width: 100%;
+    height: 100%;
+}
 html {
     font-size: 62.5%;
 }
@@ -5,3 +9,125 @@ body {
     background-image: url(/page-bgs/Stars-bg.svg
     );
 }
+@font-face {
+    font-family: 'Voyager-heavy';
+    src: url('/fonts/Voyager\ Heavy\ Webfont.woff') format('woff');
+}
+@font-face {
+    font-family: 'Voyager-light';
+    src: url('/fonts/Voyager\ Light\ Webfont.woff') format('woff');
+}
+
+.orbit-page {
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    .page-travel-transition {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+    .content-wrapper {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        z-index: 9999;
+    }
+    .shuttle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 3rem;
+        height: 3rem;
+        align-self: center;
+    }
+    .nav-container {
+        flex: .2;
+        position: relative;
+        top: 5%;
+        width: auto;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        padding-left: 5px;
+        gap: 5px;
+        
+        .nav-list {
+            padding: 1rem;
+            line-height: 3rem;
+        }
+        
+        .nav-item {
+            color: #fff;
+            list-style-type: none;
+            font-size: 1.6rem;
+            letter-spacing: 1px;
+            font-family: 'voyager-light';
+        }
+    }
+
+    .name-container {
+        flex: .75;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: auto;
+        width: auto;
+        align-self: center;
+        color: #fff;
+        line-height: 0;
+        .main-name {
+            font-size: 3.2rem;
+            font-family: 'voyager-light', sans-serif, serif;
+        }
+        .occupation-header {
+            font-size: .6rem;
+            letter-spacing: 1px;
+            font-family: 'voyager-light', sans-serif, serif;
+        }
+        .github-header {
+            margin-top: 2%;
+        }
+    }
+    .copyright-footer {
+        flex: .05;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }    
+    .copyright {
+        color: #fff;
+        font-family: 'voyager-light';
+        font-size: .5rem;
+    }
+}
+
+.transition-fade {
+    transition: .5s;
+    transform: translateyx(0);
+}
+  
+html.is-leaving .transition-fade {
+    transform: translatex(-100%);
+    
+}
+
+html.is-rendering .transition-fade {
+    transform: translatex(100%);
+}
+
+
+
+
+
+
+
+
+
+
+
+  

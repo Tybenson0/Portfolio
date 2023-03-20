@@ -1,8 +1,178 @@
+html, body, .orbit-page {
+  width: 100%;
+  height: 100%;
+}
+
 html {
   font-size: 62.5%;
 }
 
 body {
   background-image: url(/page-bgs/Stars-bg.svg);
+}
+
+@font-face {
+  font-family: 'Voyager-heavy';
+  src: url("/fonts/Voyager Heavy Webfont.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Voyager-light';
+  src: url("/fonts/Voyager Light Webfont.woff") format("woff");
+}
+
+.orbit-page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.orbit-page .page-travel-transition {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.orbit-page .content-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+}
+
+.orbit-page .shuttle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+.orbit-page .nav-container {
+  -webkit-box-flex: .2;
+      -ms-flex: .2;
+          flex: .2;
+  position: relative;
+  top: 5%;
+  width: auto;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding-left: 5px;
+  gap: 5px;
+}
+
+.orbit-page .nav-container .nav-list {
+  padding: 1rem;
+  line-height: 3rem;
+}
+
+.orbit-page .nav-container .nav-item {
+  color: #fff;
+  list-style-type: none;
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+  font-family: 'voyager-light';
+}
+
+.orbit-page .name-container {
+  -webkit-box-flex: .75;
+      -ms-flex: .75;
+          flex: .75;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: auto;
+  width: auto;
+  -ms-flex-item-align: center;
+      align-self: center;
+  color: #fff;
+  line-height: 0;
+}
+
+.orbit-page .name-container .main-name {
+  font-size: 3.2rem;
+  font-family: 'voyager-light', sans-serif, serif;
+}
+
+.orbit-page .name-container .occupation-header {
+  font-size: .6rem;
+  letter-spacing: 1px;
+  font-family: 'voyager-light', sans-serif, serif;
+}
+
+.orbit-page .name-container .github-header {
+  margin-top: 2%;
+}
+
+.orbit-page .copyright-footer {
+  -webkit-box-flex: .05;
+      -ms-flex: .05;
+          flex: .05;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.orbit-page .copyright {
+  color: #fff;
+  font-family: 'voyager-light';
+  font-size: .5rem;
+}
+
+.transition-fade {
+  -webkit-transition: .5s;
+  transition: .5s;
+  -webkit-transform: translateyx(0);
+          transform: translateyx(0);
+}
+
+html.is-leaving .transition-fade {
+  -webkit-transform: translatex(-100%);
+          transform: translatex(-100%);
+}
+
+html.is-rendering .transition-fade {
+  -webkit-transform: translatex(100%);
+          transform: translatex(100%);
 }
 /*# sourceMappingURL=main.css.map */
