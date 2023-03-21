@@ -25,29 +25,12 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
   height: 100%;
   width: 100%;
-}
-
-.orbit-page .page-travel-transition {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-}
-
-.orbit-page .content-wrapper {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  z-index: 9999;
 }
 
 .orbit-page .shuttle {
@@ -81,13 +64,12 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  padding-left: 5px;
-  gap: 5px;
+  padding-left: 10px;
 }
 
 .orbit-page .nav-container .nav-list {
   padding: 1rem;
-  line-height: 3rem;
+  line-height: 4rem;
 }
 
 .orbit-page .nav-container .nav-item {
@@ -96,6 +78,32 @@ body {
   font-size: 1.6rem;
   letter-spacing: 1px;
   font-family: 'voyager-light';
+}
+
+.orbit-page .celestial-body-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 2px solid white;
+  position: absolute;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  width: 18rem;
+  height: 16rem;
+}
+
+.orbit-page .celestial-body-container .moon {
+  margin-bottom: 4rem;
 }
 
 .orbit-page .name-container {
@@ -157,6 +165,80 @@ body {
   color: #fff;
   font-family: 'voyager-light';
   font-size: .5rem;
+}
+
+.section-title {
+  margin: 5% 0 0 5%;
+  padding: 5px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border: 2px solid white;
+  font-size: 1.8rem;
+  font-family: voyager-light;
+  color: #fff;
+}
+
+.celestial-body-container .lander-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 39%;
+  height: 39%;
+}
+
+.celestial-body-container .lander-body .lander {
+  position: absolute;
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+  width: 4rem;
+  height: 4rem;
+  margin: -2rem -1.5rem 0 0;
+}
+
+.celestial-body-container .lander-body .celestial-body {
+  width: 7rem;
+  height: 7rem;
+}
+
+.celestial-body-container .lander-text-container {
+  width: auto;
+}
+
+.celestial-body-container .lander-text-container .arrow {
+  margin-left: 3rem;
+  -webkit-transform: rotate(-15deg);
+          transform: rotate(-15deg);
+}
+
+.celestial-body-container .lander-text-container .lander-text {
+  text-align: center;
+  font-size: 1.0;
+  color: #fff;
+  font-family: voyager-light;
+  letter-spacing: 0;
+  margin: 0;
+}
+
+.projects-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  border: 2px solid #fff;
+  align-self: flex-end;
+  justify-self: flex-end;
+}
+
+.projects-container .project-item {
+  width: 20rem;
+  height: 20rem;
+  border: 2px solid white;
 }
 
 .transition-fade {

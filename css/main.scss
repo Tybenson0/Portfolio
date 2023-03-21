@@ -17,25 +17,15 @@ body {
     font-family: 'Voyager-light';
     src: url('/fonts/Voyager\ Light\ Webfont.woff') format('woff');
 }
+//code above is general code that is used in multiple areas of the site.//
 
+//the section below is the css for the entire MOBILE landing page//
 .orbit-page {
     display: flex;
-    align-items: stretch;
     flex-direction: column;
     height: 100%;
     width: 100%;
-    .page-travel-transition {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        z-index: 1;
-    }
-    .content-wrapper {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        z-index: 9999;
-    }
+    
     .shuttle {
         display: flex;
         align-items: center;
@@ -52,12 +42,11 @@ body {
         height: auto;
         display: flex;
         flex-direction: row;
-        padding-left: 5px;
-        gap: 5px;
+        padding-left: 10px;
         
         .nav-list {
             padding: 1rem;
-            line-height: 3rem;
+            line-height: 4rem;
         }
         
         .nav-item {
@@ -66,6 +55,22 @@ body {
             font-size: 1.6rem;
             letter-spacing: 1px;
             font-family: 'voyager-light';
+        }
+    }
+    
+    .celestial-body-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        border: 2px solid white;
+        position: absolute;
+        align-self: flex-end;
+        width: 18rem;
+        height: 16rem;
+
+        .moon {
+            margin-bottom: 4rem;
         }
     }
 
@@ -93,6 +98,7 @@ body {
             margin-top: 2%;
         }
     }
+
     .copyright-footer {
         flex: .05;
         display: flex;
@@ -105,6 +111,69 @@ body {
         font-size: .5rem;
     }
 }
+
+//the section below is for the entire PROJECTS-MOBILE page
+.section-title {
+    margin: 5% 0 0 5%;
+    padding: 5px;
+    width: fit-content;
+    border: 2px solid white;
+    font-size: 1.8rem;
+    font-family: voyager-light;
+    color: #fff;
+}
+
+.celestial-body-container {
+    .lander-body {
+        display: flex;
+        flex-direction: column;
+        width: 39%;
+        height: 39%;
+        .lander {
+            position: absolute;
+            align-self: end;
+            width: 4rem;
+            height: 4rem;
+            margin: -2rem -1.5rem 0 0 ;
+        }
+        .celestial-body {
+            width: 7rem;
+            height: 7rem;
+        }
+    }
+    .lander-text-container {
+        width: auto;
+
+        .arrow {
+            margin-left: 3rem;
+            transform: rotate(-15deg);
+        }
+        .lander-text {
+            text-align: center;
+            font-size: 1.0;
+            color: #fff;
+            font-family: voyager-light;
+            letter-spacing: 0;
+            margin: 0;
+        }
+    }
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border: 2px solid #fff;
+    align-self: flex-end;
+    justify-self: flex-end;
+
+    .project-item {
+        width: 20rem;
+        height: 20rem;
+        border: 2px solid white;
+    }
+}
+
+//the section below is here for page transitions, may need to be changed in the future.// 
 
 .transition-fade {
     transition: .5s;
