@@ -492,6 +492,10 @@ a {
 }
 
 .social-links-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: repeat();
+      grid-template-columns: repeat();
   margin-top: 28%;
   width: 100%;
   height: 35%;
