@@ -12,7 +12,7 @@
   </head>
   <body>
     <section id="swup" class="orbit-page transition-fade">
-      <h1 class="contact-title">To the Stars!</h1>
+      <h1 class="contact-text">To the Stars!</h1>
       <div class="celestial-body-container">
         <div class="lander-body">
           <a href="/index.html" class="station"
@@ -30,12 +30,52 @@
           </p>
         </div>
       </div>
-      <div class="social-links-container">
-        <div class="social-link"></div>
-        <div class="social-link"></div>
-        <div class="social-link"></div>
-        <div class="social-link"></div>
-        <div class="social-link"></div>
+      <div class="contact-container">
+        <div class="social-links-container">
+          <div class="social-link"></div>
+          <div class="social-link"></div>
+          <div class="social-link"></div>
+          <div class="social-link"></div>
+          <div class="social-link"></div>
+        </div>
+      </div>
+      <div class="email-container">
+        <form action="action_page.php" class="form-container">
+          <label for="fname" class="contact-text">First Name</label>
+          <input
+            type="text"
+            id="fname"
+            name="firstname"
+            placeholder="Your name.."
+            class="form-bg"
+          />
+
+          <label for="lname" class="contact-text">Last Name</label>
+          <input
+            type="text"
+            id="lname"
+            name="lastname"
+            placeholder="Your last name.."
+            class="form-bg"
+          />
+
+          <label for="country" class="contact-text">Country</label>
+          <select id="country" name="country" class="form-bg">
+            <option value="australia">Australia</option>
+            <option value="canada">Canada</option>
+            <option value="usa">USA</option>
+          </select>
+
+          <label for="subject" class="contact-text">Subject</label>
+          <textarea
+            id="subject"
+            name="subject"
+            placeholder="Write something.."
+            class="form-bg text-area"
+          ></textarea>
+
+          <input type="submit" value="Submit" />
+        </form>
       </div>
     </section>
   </body>
