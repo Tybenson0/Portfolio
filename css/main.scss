@@ -34,6 +34,7 @@ a {
     width: 100%;
     
     .shuttle {
+        z-index: 999;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -42,10 +43,11 @@ a {
         align-self: center;
     }
     .nav-container {
+        z-index: 9999;
         flex: .2;
         position: relative;
         top: 5%;
-        width: auto;
+        width: fit-content;
         height: auto;
         display: flex;
         flex-direction: row;
@@ -438,10 +440,46 @@ a {
     opacity: .8;
 }
 
+//the section below is for the rocketship animation
+
+@keyframes rumble {
+    0% {-webkit-transform: rotate(0deg);}
+    25% {-webkit-transform: translate(2px, 0px) rotate(-3deg);}
+}
+
+#rumble-hover:hover #shuttle{
+    animation: rumble .0625s infinite linear;
+}
+
+@keyframes slide-up {
+    from {
+      transform: translatey(0%);
+    }
+    to {
+      transform: translatey(-1000%);
+    }
+}
+.shoot-off {
+    animation: slide-up .15s ;
+    animation-fill-mode: forwards;
+}
+.shoot-off::before {
+    content: '';
+    z-index: 1;
+    margin-top: 19rem;
+    position: relative;
+    left: 60%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 150px;
+    background: linear-gradient(#00d0ff, transparent);
+}
+
+
 //the section below is here for page transitions, may need to be changed in the future.// 
 
 .transition-fade {
-    transition: .5s;
+    transition: 1s;
     transform: translateyx(0);
 }
   

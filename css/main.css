@@ -42,6 +42,7 @@ a {
 }
 
 .orbit-page .shuttle {
+  z-index: 999;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -58,12 +59,15 @@ a {
 }
 
 .orbit-page .nav-container {
+  z-index: 9999;
   -webkit-box-flex: .2;
       -ms-flex: .2;
           flex: .2;
   position: relative;
   top: 5%;
-  width: auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -617,9 +621,75 @@ a {
   opacity: .8;
 }
 
+@-webkit-keyframes rumble {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  25% {
+    -webkit-transform: translate(2px, 0px) rotate(-3deg);
+  }
+}
+
+@keyframes rumble {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  25% {
+    -webkit-transform: translate(2px, 0px) rotate(-3deg);
+  }
+}
+
+#rumble-hover:hover #shuttle {
+  -webkit-animation: rumble .0625s infinite linear;
+          animation: rumble .0625s infinite linear;
+}
+
+@-webkit-keyframes slide-up {
+  from {
+    -webkit-transform: translatey(0%);
+            transform: translatey(0%);
+  }
+  to {
+    -webkit-transform: translatey(-1000%);
+            transform: translatey(-1000%);
+  }
+}
+
+@keyframes slide-up {
+  from {
+    -webkit-transform: translatey(0%);
+            transform: translatey(0%);
+  }
+  to {
+    -webkit-transform: translatey(-1000%);
+            transform: translatey(-1000%);
+  }
+}
+
+.shoot-off {
+  -webkit-animation: slide-up .15s;
+          animation: slide-up .15s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.shoot-off::before {
+  content: '';
+  z-index: 1;
+  margin-top: 19rem;
+  position: relative;
+  left: 60%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 10px;
+  height: 150px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#00d0ff), to(transparent));
+  background: linear-gradient(#00d0ff, transparent);
+}
+
 .transition-fade {
-  -webkit-transition: .5s;
-  transition: .5s;
+  -webkit-transition: 1s;
+  transition: 1s;
   -webkit-transform: translateyx(0);
           transform: translateyx(0);
 }
