@@ -229,6 +229,22 @@ a {
     
 }
 
+.shuttle-travel {
+    rotate: 90deg;
+    margin-left: 14rem;
+}
+.shuttle-trail::before {
+    content: '';
+    z-index: 1;
+    margin-top: 19.25rem;
+    position: relative;
+    left: 60%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 150px;
+    background: linear-gradient(#00d0ff, transparent);
+}
+
 //this section is for the skills and technologies section//
 
 .main {
@@ -373,11 +389,11 @@ a {
     display: grid;
     align-items: center;
     justify-items: center;
-    grid-template-columns: repeat(3, auto);
-    grid-template-rows: repeat(3, auto);
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
     width: 70%;
     height: 65%;
-    gap: 1rem;
+    gap: 0rem;
 }
 .contact-container {
     height: 100%;
@@ -387,12 +403,31 @@ a {
     align-items: flex-end;
 }
 .social-link {
+    display: flex;
+    align-content: center;
     width: 9rem;
     height: 9rem;
     background-color: #5fb7cf;
     opacity: .8;
     -webkit-clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
         clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
+        
+}
+.social-item {
+    background-color: black;
+}
+.linkedin {
+    background-color: #0077b5;
+}
+.indeed {
+    margin-top: .5rem;
+    height: 8rem;
+    width: 8rem;
+    background-position: 100px 0;
+}
+.resume {
+    width: 8.5rem;
+    margin-left: .25rem;
 }
 .social-link:nth-child(1n) {
     grid-row: 2 / 3;                          
@@ -405,10 +440,12 @@ a {
 .social-link:nth-child(3n) {
     grid-row: 2 / 3;                          
     grid-column: 2 / 3; 
+    background-color: #fff;
 }
 .social-link:nth-child(4n) {
     grid-row: 2 / 3;                          
     grid-column: 1 / 2; 
+    background-color: #3399CC;
 }
 .social-link:nth-child(5n) {
     grid-row: 2 / 3;                          
@@ -446,6 +483,15 @@ a {
     0% {-webkit-transform: rotate(0deg);}
     25% {-webkit-transform: translate(2px, 0px) rotate(-3deg);}
 }
+@keyframes rumble-travel {
+    0% {-webkit-transform: rotate(0deg);}
+    25% {-webkit-transform: translate(3px, -2px);}
+    50% {-webkit-transform: translate(3px, 3px);}
+}
+
+.shuttle-travel {
+    animation: rumble-travel 5s infinite ease-in-out
+}
 
 #rumble-hover:hover #shuttle{
     animation: rumble .0625s infinite linear;
@@ -466,7 +512,7 @@ a {
 .shoot-off::before {
     content: '';
     z-index: 1;
-    margin-top: 19rem;
+    margin-top: 19.25rem;
     position: relative;
     left: 60%;
     transform: translateX(-50%);
@@ -493,6 +539,49 @@ html.is-rendering .transition-fade {
 }
 
 
+@media only screen and (min-width: 1500px) {
+    @keyframes rumble {
+        0% {-webkit-transform: rotate(0deg);}
+        25% {-webkit-transform: translate(2px, 0px) rotate(-3deg);}
+    }
+    
+    #rumble-hover:hover #shuttle{
+        animation: rumble .0625s infinite linear;
+    }
+}
+
+//the code below is for the floating animations for the mobile-version
+@keyframes float {
+	0% {
+		transform: translatey(0px);
+		transform: translateX(0px);
+	}
+	50% {
+		transform: translatey(5px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
+}
+@keyframes float-light {
+	0% {
+		transform: translatey(0px);
+		transform: translateX(0px);
+	}
+	50% {
+		transform: translatey(8px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
+}
+
+.celestial-body-container {
+    animation: float 9s infinite linear;
+}
+.shuttle-idle {
+    animation: float 7s infinite linear;
+}
 
 
 
