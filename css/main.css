@@ -102,7 +102,7 @@ a {
 
 .orbit-page .travel-container .travel-list {
   padding: 0;
-  line-height: 4.5rem;
+  line-height: 5.5rem;
 }
 
 .orbit-page .travel-container .travel-item {
@@ -334,6 +334,12 @@ a {
   background: linear-gradient(#00d0ff, transparent);
 }
 
+li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .main {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -532,7 +538,7 @@ a {
 }
 
 .contact-container {
-  height: 100%;
+  height: 70%;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -651,9 +657,101 @@ a {
 
 .form-container {
   height: 90%;
-  width: 90%;
+  width: 95%;
   display: -ms-grid;
   display: grid;
+  -ms-grid-rows: (4rem)[12];
+      grid-template-rows: repeat(12, 4rem);
+  -webkit-clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
+  clip-path: polygon(10% 0%, 90% 0%, 100% 10%, 100% 90%, 90% 100%, 10% 100%, 0% 90%, 0% 10%);
+}
+
+.form-container::before {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: .5;
+  background-color: #5fb7cf;
+}
+
+label {
+  color: #f5f5f5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+}
+
+label .contact-name {
+  width: 60%;
+  height: 2rem;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+}
+
+label .contact-email {
+  width: 70%;
+  height: 2rem;
+}
+
+label .contact-subject {
+  width: 60%;
+  height: 2rem;
+}
+
+.label-name {
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.label-email {
+  margin-left: 2rem;
+}
+
+.label-subject {
+  margin-left: 3.5rem;
+}
+
+textarea {
+  width: 90%;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 6;
+  grid-row: 4/10;
+  height: 100%;
+}
+
+.contact-btn {
+  height: 5rem;
+  width: 5rem;
+  -ms-grid-row: 10;
+  -ms-grid-row-span: 1;
+  grid-row: 10/11;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  margin-top: 4rem;
+  border-radius: 100%;
+  background: red;
+  border: 1px solid white;
+  color: black;
+  font-family: voyager-light;
+}
+
+.contact-btn:hover {
+  -webkit-box-shadow: 0 0 5px 2px white;
+          box-shadow: 0 0 5px 2px white;
+  color: white;
+  background: #009E60;
 }
 
 .contact-text {
@@ -741,9 +839,38 @@ a {
   }
 }
 
+@-webkit-keyframes slide-right {
+  from {
+    -webkit-transform: translatey(0%);
+            transform: translatey(0%);
+  }
+  to {
+    -webkit-transform: translatey(-2000%);
+            transform: translatey(-2000%);
+  }
+}
+
+@keyframes slide-right {
+  from {
+    -webkit-transform: translatey(0%);
+            transform: translatey(0%);
+  }
+  to {
+    -webkit-transform: translatey(-2000%);
+            transform: translatey(-2000%);
+  }
+}
+
 .shoot-off {
   -webkit-animation: slide-up .15s;
           animation: slide-up .15s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.shoot-off-right {
+  -webkit-animation: slide-right .15s;
+          animation: slide-right .15s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }

@@ -1,7 +1,10 @@
 $(document).ready(function(){
-    $(".nav-item").click(function(){
-        $(".shuttle").addClass("shoot-off");
-      });
+      $(".nav-item").click(function(){
+          $(".shuttle").addClass("shoot-off");
+        });
+      $(".travel-item").click(function(){
+          $(".shuttle-travel").addClass("shoot-off-right");
+        });
     
 
       $('.waitBeforeNavigate').on("click", function (ev) {
@@ -16,6 +19,5 @@ $(document).ready(function(){
       }); 
 });
 
-const swup  = new Swup()
 
 

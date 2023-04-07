@@ -4,14 +4,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact_HQ</title>
+    <title>Contact-HQ</title>
     <link rel="stylesheet" href="/css/normalize.css" />
     <link rel="stylesheet" href="/css/main.css" />
-    <script src="https://unpkg.com/swup@3"></script>
     <script defer src="/script.js"></script>
   </head>
   <body>
-    <section id="swup" class="orbit-page transition-fade">
+    <section class="orbit-page">
       <h1 class="contact-title">To the Stars!</h1>
       <div class="celestial-body-container">
         <div class="lander-body">
@@ -49,41 +48,40 @@
         </div>
       </div>
       <div class="email-container">
-        <form action="action_page.php" class="form-container">
-          <label for="fname" class="contact-text">First Name</label>
-          <input
-            type="text"
-            id="fname"
-            name="firstname"
-            placeholder="Your name.."
-            class="form-bg"
-          />
-
-          <label for="lname" class="contact-text">Last Name</label>
-          <input
-            type="text"
-            id="lname"
-            name="lastname"
-            placeholder="Your last name.."
-            class="form-bg"
-          />
-
-          <label for="country" class="contact-text">Country</label>
-          <select id="country" name="country" class="form-bg">
-            <option value="australia">Australia</option>
-            <option value="canada">Canada</option>
-            <option value="usa">USA</option>
-          </select>
-
-          <label for="subject" class="contact-text">Subject</label>
-          <textarea
-            id="subject"
-            name="subject"
-            placeholder="Write something.."
-            class="form-bg text-area"
-          ></textarea>
-
-          <input type="submit" value="Submit" />
+        <form
+          class="form-container"
+          action="https://formspree.io/f/mpzbkyby"
+          method="POST"
+        >
+          <label class="label-name">
+            Your Name:
+            <input
+              type="name"
+              name="name"
+              placeholder="your name..."
+              class="contact-name"
+            />
+          </label>
+          <label class="label-email">
+            Your Email:
+            <input
+              type="email"
+              name="email"
+              class="contact-email"
+              placeholder="Your email..."
+            />
+          </label>
+          <label class="label-subject">
+            Subject:
+            <input
+              type="text"
+              name="Subject"
+              class="contact-subject"
+              placeholder="Subject..."
+            />
+          </label>
+          <textarea name="message" placeholder="Your message..."></textarea>
+          <button type="submit" class="contact-btn">Send</button>
         </form>
       </div>
     </section>
