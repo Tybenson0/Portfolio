@@ -5,6 +5,13 @@ $(document).ready(function(){
       $(".travel-item").click(function(){
           $(".shuttle-travel").addClass("shoot-off-right");
         });
+      $(".lander").click(function(){
+          $(".lander").addClass("shoot-off-back");
+        });
+      $(".station").click(function(){
+          $(".station").addClass("shoot-off-back");
+        });
+      
     
 
       $('.waitBeforeNavigate').on("click", function (ev) {
