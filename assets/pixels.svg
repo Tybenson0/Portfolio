@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin:auto;background:#5fb7cf;display:block;z-index:1;position:relative" width="150" height="150" preserveAspectRatio="xMidYMid" viewBox="0 0 150 150">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin:auto;background:black;display:block;z-index:1;position:relative" width="150" height="150" preserveAspectRatio="xMidYMid" viewBox="0 0 150 150">
 <g transform="translate(75,75) scale(1,1) translate(-75,-75)"><defs>
   <symbol id="squares-350350131041435343534">
-  <path d="M2.100107140124046 0L2.100107140124046 2.100107140124046L0 2.100107140124046L-4.440892098500626e-16 0Z" fill="inherit"></path>
+  <path d="M2.100107140124046 0L2.100107140124046 2.100107140124046L0 2.100107140124046L-4.440892098500626e-16 0Z" fill="#6f0000"></path>
   </symbol>
 </defs><use href="#squares-350350131041435343534" fill="#5fb7cf" fill-opacity="0.98" transform="translate(1.050053570062023 1.050053570062023) scale(1) translate(-1.050053570062023 -1.050053570062023)">
   <animate attributeName="fill" repeatCount="indefinite" dur="10s" begin="-0.4965520152769609s" values="#5fb7cf;#05d9e8" keyTimes="0;1"></animate>

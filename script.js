@@ -28,6 +28,7 @@ $(document).ready(function(){
           else $('#project-3').css('opacity', .88);
         });
       
+
     
       //below adds a slight delay to page load to allow for rocket animation to complete
       $('.waitBeforeNavigate').on("click", function (ev) {
@@ -41,6 +42,8 @@ $(document).ready(function(){
         }, 300);                           // time in ms
       }); 
 });
+
+
 
 
 
