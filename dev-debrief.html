@@ -7,6 +7,10 @@
     <title>Dev-Debriefing</title>
     <link rel="stylesheet" href="/css/normalize.css" />
     <link rel="stylesheet" href="/css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script defer src="/script.js"></script>
   </head>
@@ -18,7 +22,7 @@
         </div>
       </div>
       <div class="celestial-body-container position">
-        <div class="lander-body">
+        <div class="lander-body animate__animated animate__zoomInDown">
           <a href="/index.html" class="station waitBeforeNavigate"
             ><img src="/assets/station.svg" alt=""
           /></a>
@@ -64,22 +68,29 @@
           <div class="dev-desc">
             <div class="dev-text-container">
               <p class="dev-desc-text">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam,
-                aspernatur architecto quod magnam accusamus sit cupiditate
-                quisquam at nulla delectus ullam ad, neque dolor sapiente
-                laborum quaerat. Explicabo ad deleniti quisquam iusto odio
-                accusantium fugit, expedita sed culpa pariatur porro.
+                Salutations space-faring traveler! My name is Ty from the planet
+                earth and I am a web developer! I started my development journey
+                a couple years ago when I first started learning HTML,CSS, and
+                Javascript. I have been steadily progressing into using more
+                advanced tools and techniques. I have also been learning the
+                various frameworks that are in hot demand for todays web
+                infastructure such as React, Angular, Vue.js, Svelte, and More!
+                I hope you have enjoyed your travels across the our solar system
+                and I hope to see you again!
               </p>
+              <span class="gag-joke">don't text and space voyage!</span>
             </div>
           </div>
         </div>
         <div class="dev-nav">
-          <div class="nav-container travel-container">
+          <div
+            class="nav-container travel-container animate__animated animate__lightSpeedInLeft animate__faster"
+          >
             <ul class="nav-list travel-list">
               <div class="nav-links travel-links">
                 <li>
                   <a
-                    class="waitBeforeNavigate nav-item travel-item"
+                    class="waitBeforeNavigate nav-item travel-item-back"
                     href="/projects.html"
                   >
                     Projects
@@ -87,7 +98,7 @@
                 </li>
                 <li>
                   <a
-                    class="waitBeforeNavigate nav-item travel-item"
+                    class="waitBeforeNavigate nav-item travel-item-back"
                     href="/skills.html"
                   >
                     Skills

@@ -1,11 +1,14 @@
 $(document).ready(function(){
 
       //below is the click functions for rocket animations
-      $(".nav-item").click(function(){
+      $(".home-travel").click(function(){
           $(".shuttle").addClass("shoot-off");
         });
       $(".travel-item").click(function(){
           $(".shuttle-travel").addClass("shoot-off-right");
+        });
+      $(".travel-item-back").click(function(){
+          $(".station").addClass("shoot-off-back");
         });
       $(".lander").click(function(){
           $(".lander").addClass("shoot-off-back");
@@ -16,6 +19,7 @@ $(document).ready(function(){
 
      
         $('#project-1').on('click', function() {
+          
           if ($('#project-1').css('opacity') == .88) $('#project-1').css('opacity', 0);
           else $('#project-1').css('opacity', .88);
         });

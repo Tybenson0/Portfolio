@@ -367,12 +367,13 @@ a {
 }
 
 .projects-container .project-item .project-title-desc {
-  font-size: 1rem;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
   position: absolute;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  font-family: voyager-light;
+  font-family: prototype;
   color: white;
   margin-top: 6rem;
 }
@@ -415,10 +416,12 @@ a {
   margin: 0;
   color: white;
   font-size: 1.2rem;
+  letter-spacing: 1px;
   font-family: voyager-light;
   margin-bottom: .5rem;
   -ms-flex-preferred-size: 80%;
       flex-basis: 80%;
+  margin-left: .5rem;
 }
 
 .overlay .code-links {
@@ -482,11 +485,10 @@ li {
       flex-basis: 50%;
   display: -ms-grid;
   display: grid;
-  margin-top: -20%;
   -ms-grid-columns: (1fr)[12];
       grid-template-columns: repeat(12, 1fr);
-  -ms-grid-rows: (1fr)[2];
-      grid-template-rows: repeat(2, 1fr);
+  -ms-grid-rows: (1fr)[8];
+      grid-template-rows: repeat(8, 1fr);
 }
 
 .asteroid-svg {
@@ -531,14 +533,24 @@ li {
   rotate: 30deg;
 }
 
+.asteroid:nth-child(2n) .skill2 {
+  width: 4rem;
+  margin-right: 1rem;
+}
+
 .asteroid:nth-child(3n) {
-  -ms-grid-column: 9;
+  -ms-grid-column: 8;
   -ms-grid-column-span: 2;
-  grid-column: 9/11;
-  -ms-grid-row: 3;
-  -ms-grid-row-span: 2;
-  grid-row: 3/5;
+  grid-column: 8/10;
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 1;
+  grid-row: 4/5;
   rotate: 5deg;
+}
+
+.asteroid:nth-child(3n) .skill3 {
+  margin-top: 1rem;
+  width: 3.5rem;
 }
 
 .asteroid:nth-child(4n) {
@@ -549,6 +561,10 @@ li {
   -ms-grid-row-span: 2;
   grid-row: 4/6;
   rotate: -8deg;
+}
+
+.asteroid:nth-child(4n) .skill4 {
+  width: 4rem;
 }
 
 .asteroid:nth-child(5n) {
@@ -571,6 +587,11 @@ li {
   rotate: 40deg;
 }
 
+.asteroid:nth-child(6n) .skill5 {
+  width: 5rem;
+  background-color: #fff;
+}
+
 .asteroid:nth-child(7n) {
   -ms-grid-column: 6;
   -ms-grid-column-span: 2;
@@ -591,6 +612,10 @@ li {
   rotate: 21deg;
 }
 
+.asteroid:nth-child(8n) .skill7 {
+  margin-top: 1rem;
+}
+
 .asteroid:nth-child(9n) {
   -ms-grid-column: 8;
   -ms-grid-column-span: 3;
@@ -599,6 +624,10 @@ li {
   -ms-grid-row-span: 2;
   grid-row: 5/7;
   rotate: 34deg;
+}
+
+.asteroid:nth-child(9n) .skill8 {
+  margin-right: 1rem;
 }
 
 .asteroid:nth-child(10n) {
@@ -621,6 +650,12 @@ li {
   rotate: 34deg;
 }
 
+.asteroid:nth-child(11n) .skill10 {
+  width: 6rem;
+  height: 6rem;
+  rotate: 15deg;
+}
+
 .asteroid:nth-child(12n) {
   -ms-grid-column: 11;
   -ms-grid-column-span: 2;
@@ -629,6 +664,10 @@ li {
   -ms-grid-row-span: 2;
   grid-row: 10/12;
   rotate: 90deg;
+}
+
+.asteroid:nth-child(12n) .skill11 {
+  rotate: -60deg;
 }
 
 .asteroid:nth-child(13n) {
@@ -806,6 +845,22 @@ li {
   width: 100%;
   padding: 0 .25rem 0 .5rem;
   height: 97%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.gag-joke {
+  font-size: 1.6rem;
+  font-family: voyager-heavy;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 1.5rem;
+  color: #D0342C;
 }
 
 .dev-desc-text {
@@ -1069,8 +1124,8 @@ textarea {
 }
 
 .contact-btn:hover {
-  -webkit-box-shadow: 0 0 5px 2px white;
-          box-shadow: 0 0 5px 2px white;
+  -webkit-box-shadow: 0 0 2px 2px white;
+          box-shadow: 0 0 2px 2px white;
   color: white;
   background: #009E60;
 }
