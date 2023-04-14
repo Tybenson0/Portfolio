@@ -1,6 +1,7 @@
 html, body, .orbit-page {
     width: 100%;
     height: 100%;
+    overflow: hidden;
 }
 h1 {
     margin: 0;
@@ -26,9 +27,6 @@ body {
     src: url('/fonts/Prototype.woff') format('woff');
 }
 
-.B {
-    border: 2px solid white;
-}
 a {
     text-decoration: none;
 }
@@ -85,7 +83,7 @@ a {
         
         .travel-list  {
             padding: 0;
-            line-height: 5.5rem;
+            line-height: 4.5rem;
         }
         
         .travel-item {
@@ -96,7 +94,6 @@ a {
         
         
     .celestial-body-container {
-        margin-top: 3%;
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
@@ -104,7 +101,7 @@ a {
             position: absolute;
             align-self: flex-end;
             width: 18rem;
-            height: 16rem;
+            height: 20%;
 
         .moon {
             margin-bottom: 4rem;
@@ -231,7 +228,7 @@ a {
     flex-basis: 50%;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(3, 15rem);
+    grid-template-rows: repeat(3, 1fr);
     justify-items: center;
     align-items: center;
     height: 50%;
@@ -311,7 +308,7 @@ a {
         color: white;
         font-size: 1.2rem;
         letter-spacing: 1px;
-        font-family: voyager-light;
+        font-family: prototype;
         margin-bottom: .5rem;
         flex-basis: 80%;
         margin-left: .5rem;
@@ -368,7 +365,7 @@ li {
     flex-basis: 50%;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(8, 1fr);
+    grid-template-rows: repeat(6, 40px);
 }
 .asteroid-svg {
     width: 100%;
@@ -400,13 +397,14 @@ li {
     }
 }
 .asteroid:nth-child(3n) {
-    grid-column: 8/10;
-    grid-row: 4/5;
+    grid-column: 7/10;
+    grid-row: 3/4;
     rotate: 5deg;
 
     .skill3 {
-        margin-top: 1rem;
-        width: 3.5rem;
+        margin-top: .5rem;
+        width: 2.25rem;
+        rotate: 20deg;
     }
     
 }
@@ -496,10 +494,10 @@ li {
 
 .station {
     position: absolute;
-            align-self: end;
-            width: 4rem;
-            height: 4rem;
-            margin: -3.5rem -3rem 0 0 ;
+    align-self: end;
+    width: 4rem;
+    height: 4rem;
+    margin: -3.5rem -3rem 0 0 ;
 }
 .dev-info-container {
     display: grid;
@@ -549,25 +547,26 @@ li {
         width: fit-content;
         height: fit-content;
 
-            .dev-text {
-                font-size: 2.2rem;
-                color: black;
-                font-family: voyager-light;
-                margin: 0;
-                letter-spacing: 3px;
-            }
-            .dev-text:nth-child(1) {
-                font-size: 1.6rem;
-                color: black;
-                font-family: voyager-light;
-                margin: 0;
-                letter-spacing: 1px;
-            }
+            
             
         }
        
         
     }
+}
+.dev-text {
+    font-size: 2.2rem;
+    color: black;
+    font-family: voyager-light;
+    margin: 0;
+    letter-spacing: 3px;
+}
+.dev-text:nth-child(1) {
+    font-size: 1.6rem;
+    color: black;
+    font-family: voyager-light;
+    margin: 0;
+    letter-spacing: 1px;
 }
 
 .span-2 {
@@ -651,20 +650,19 @@ li {
 }
 
 .social-links-container {
-    padding-left: 1%;
     display: grid;
-    align-items: center;
     justify-items: center;
-    grid-template-columns: repeat(3, 100px);
-    grid-template-rows: repeat(3, 100px);
-    width: 70%;
+    align-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     height: 65%;
-    gap: 0rem;
+    gap: 1rem;
 }
 .contact-container {
     height: 70%;
     width: 100%;
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: flex-end;
 }
@@ -879,62 +877,33 @@ textarea {
     background: linear-gradient(#00d0ff, transparent);
 }
 
-
-//the section below is here for page transitions, may need to be changed in the future.// 
-
-.transition-fade {
-    transition: 1s;
-    transform: translateyx(0);
-}
-  
-html.is-leaving .transition-fade {
-    transform: translatex(-100%);
-    
-}
-
-html.is-rendering .transition-fade {
-    transform: translatex(100%);
-}
-
-
-@media only screen and (min-width: 1500px) {
-    @keyframes rumble {
-        0% {-webkit-transform: rotate(0deg);}
-        25% {-webkit-transform: translate(2px, 0px) rotate(-3deg);}
-    }
-    
-    #rumble-hover:hover #shuttle{
-        animation: rumble .0625s infinite linear;
-    }
-}
-
 //the code below is for the floating animations for the mobile-version
 @keyframes float {
-	0% {
-		transform: translatey(0px);
-		transform: translateX(0px);
-	}
-	50% {
-		transform: translatey(5px);
-	}
-	100% {
-		transform: translatey(0px);
-	}
+    0% {
+        transform: translatey(0px);
+        transform: translateX(0px);
+    }
+    50% {
+        transform: translatey(5px);
+    }
+    100% {
+        transform: translatey(0px);
+    }
 }
 @keyframes float-light {
-	0% {
-		transform: translatey(0px);
-		transform: translateX(0px);
-	}
-	50% {
-		transform: translatey(8px);
-	}
-	100% {
-		transform: translatey(0px);
-	}
+    0% {
+        transform: translatey(0px);
+        transform: translateX(0px);
+    }
+    50% {
+        transform: translatey(8px);
+    }
+    100% {
+        transform: translatey(0px);
+    }
 }
 @keyframes float-asteroid {
-	0% {-webkit-transform: rotate(0deg);}
+    0% {-webkit-transform: rotate(0deg);}
     50% {-webkit-transform: translate(15px,25px) rotate(20deg);}
 }
 
@@ -949,14 +918,236 @@ html.is-rendering .transition-fade {
 }
 
     
-  @keyframes typing {
+@keyframes typing {
     from { width: 0 }
     to { width: 100% }
-  }
-  @keyframes blinking {
+}
+@keyframes blinking {
       0% {border-color: white}
     50% {border-color: transparent}
-  }
+}
+
+@media only screen and (max-width: 400px) {
+    .section-title-text {
+        font-size: 1.4rem;
+    }
+    .overlay {
+        .overlay-layout {
+            height: 65%;
+            .overlay-text {
+                font-size: 1rem;
+            }
+            .code-icon {
+                width: 3rem;
+                height: 3rem;
+            }
+        }
+    }
+    .dev-desc-text {
+        font-size: 1.2rem;
+    }
+    .gag-joke {
+        font-size: 1.2rem;
+        margin-top: .5rem;
+    }
+}
+
+
+//media queries for ipads and larger screens
+@media only screen and (min-width: 700px) {
+    //general queries for general page layout
+    .section-title-container {
+        margin: 8% 0 0 8%;
+    }
+    .section-title-text {
+        font-size: 2.4rem;
+    }
+
+    .celestial-body-container {
+        margin-right: 5%;
+        width: 22rem;
+
+        .lander-body {
+            width: 45%;
+            height: 45%;
+        }
+        .celestial-body {
+            width: 8rem;
+            height: 8rem;
+        }
+        .lander {
+            margin: -2rem -1rem 0 0;
+        }
+        .lander-text {
+            font-size: 1rem;
+        }
+    }
+
+    //projects media query for ipads
+    .projects-container {
+        width: 80%;
+        align-self: center;
+        .overlay {
+            height: 16rem;
+            .overlay-layout {
+                padding-left: 5%;
+                width: 80%;
+        
+                .code-links {
+                    align-items: flex-start;
+                }
+                .overlay-text {
+                    font-size: 1.6rem;
+                    line-height: 2rem;
+                }
+            }
+        }
+    }
+    //section below is for the skills section for the ipad and other large screens
+    .asteroids-container {
+        height: 60%;
+        grid-template-columns: repeat(16, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+        .asteroid:nth-child(1n) {
+            .skill {
+                width: 4rem;
+                height: 4rem;
+            }
+        }
+        .asteroid:nth-child(2n) {
+            .skill {
+                width: 5rem;
+                height: 5rem;
+            }
+        }
+        .asteroid:nth-child(3n) {
+            .skill {
+                width: 6rem;
+                height: 6rem;
+            }
+        }
+        .asteroid:nth-child(4n) {
+            grid-column: 6/8;
+            grid-row: 4/7;
+            .skill {
+                width: 4rem;
+                height: 4rem;
+            }
+        }
+        .asteroid:nth-child(6n) {
+            grid-column: 3/6;
+            grid-row: 4/7;
+            .skill {
+                width: 7rem;
+                height: 7rem;
+                rotate: 30deg;
+            }
+        }
+        .asteroid:nth-child(7n) {
+            .skill {
+                width: 7rem;
+                height: 7rem;
+                rotate: 30deg;
+            }
+        }
+        .asteroid:nth-child(8n) {
+            grid-column: 10/13;
+            grid-row: 9/12;
+            .skill {
+                width: 6rem;
+                height: 6rem;
+                rotate: 20deg;
+            }
+        }
+        .asteroid:nth-child(9n) {
+            grid-column: 10/13;
+            grid-row: 5/8;
+        }
+        .asteroid:nth-child(10n) {
+            grid-column: 13/16;
+            grid-row: 6/9;
+            .skill {
+                width: 6rem;
+                height: 6rem;
+            }
+        }
+        .asteroid:nth-child(11n) {
+            grid-column: 15/17;
+            .skill {
+                width: 5rem;
+                height: 5rem;
+            }
+        }
+        .asteroid:nth-child(12n) {
+            grid-column: 15/17;
+            .skill {
+                width: 6rem;
+                height: 6rem;
+            }
+        }
+        .asteroid:nth-child(13n) {
+            .skill {
+                width: 6rem;
+                height: 6rem;
+            }
+        }
+    }
+    //section below is for the developer debriefing section for ipads and other large screens
+    .dev-text:nth-child(1n) {
+        font-size: 2rem;
+    }
+    .dev-desc-border {
+        width: 85%;
+    }
+    .dev-text-container {
+        padding: 0 1rem 0 1.5rem;
+    }
+    .dev-desc-text {
+        font-size: 2.2rem;
+        letter-spacing: 1px;
+        line-height: 3rem;
+    }
+    .gag-joke {
+        font-size: 2rem;
+        margin-top: 1rem;
+    }
+    //the section below is for the contact page for ipad and larger screens
+    .social-link {
+        width: 10.5rem;
+        height: 10.5rem;
+        .indeed {
+            width: 9.5rem;
+            height: 9.5rem;
+        }
+        .resume {
+            width: 9.5rem;
+            margin-left: .75rem;
+        }
+    }
+    .form-container {
+        width: 75%;
+        padding: 2rem 1rem 0 1rem;
+        grid-template-rows: repeat(11, 4rem);
+        textarea {   
+        grid-row: 4/11;
+        }
+        .contact-btn {
+            grid-row: 11/12;
+        }
+    }
+}
+
+
+@media only screen and (min-width: 1500px) {
+    @keyframes rumble {
+        0% {-webkit-transform: rotate(0deg);}
+        25% {-webkit-transform: translate(2px, 0px) rotate(-3deg);}
+    }
+    
+    #rumble-hover:hover #shuttle{
+        animation: rumble .0625s infinite linear;
+    }
+}
 
 
 
