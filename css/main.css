@@ -70,8 +70,7 @@ a {
   -webkit-box-flex: .2;
       -ms-flex: .2;
           flex: .2;
-  position: relative;
-  top: 5%;
+  margin-top: 8%;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -104,10 +103,10 @@ a {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  top: 2%;
   padding-left: 0px;
   -ms-flex-preferred-size: 25%;
       flex-basis: 25%;
+  margin: 5% 0 0 0;
 }
 
 .orbit-page .travel-container .travel-list {
@@ -224,8 +223,28 @@ a {
 }
 
 .section-title {
-  -ms-flex-preferred-size: 25%;
-      flex-basis: 25%;
+  -ms-flex-preferred-size: 22%;
+      flex-basis: 22%;
+}
+
+.flex-layout-projects {
+  -ms-flex-preferred-size: 75%;
+      flex-basis: 75%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .section-title-container {
@@ -299,8 +318,8 @@ a {
 }
 
 .projects-container {
-  -ms-flex-preferred-size: 50%;
-      flex-basis: 50%;
+  -ms-flex-preferred-size: 75%;
+      flex-basis: 75%;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr;
@@ -311,7 +330,8 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 50%;
+  height: 100%;
+  width: 100%;
 }
 
 .projects-container .projects-border {
@@ -324,6 +344,7 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  position: relative;
   z-index: 2;
   height: 90%;
   width: 90%;
@@ -387,8 +408,11 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 90%;
-  height: 14rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
   background: #6f0000;
   position: absolute;
   opacity: 0;
@@ -414,10 +438,8 @@ a {
   font-size: 1.2rem;
   letter-spacing: 1px;
   font-family: prototype;
-  margin-bottom: .5rem;
   -ms-flex-preferred-size: 80%;
       flex-basis: 80%;
-  margin-left: .5rem;
 }
 
 .overlay .code-links {
@@ -689,12 +711,14 @@ li {
 }
 
 .dev-info-container {
+  -ms-flex-preferred-size: 75%;
+      flex-basis: 75%;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (48%)[2];
       grid-template-columns: repeat(2, 48%);
-  -ms-grid-rows: (25%)[20];
-      grid-template-rows: repeat(20, 25%);
+  -ms-grid-rows: (10%)[8];
+      grid-template-rows: repeat(8, 10%);
   margin-left: 5%;
   justify-items: center;
   height: 25%;
@@ -811,7 +835,9 @@ li {
   -ms-grid-row-span: 6;
   grid-row: 4/10;
   width: 100%;
-  height: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   padding: 2px;
   background-color: #655f45;
   -webkit-clip-path: polygon(5% 0%, 95% 0%, 100% 5%, 100% 95%, 95% 100%, 5% 100%, 0% 95%, 0% 5%);
@@ -842,6 +868,7 @@ li {
   width: 100%;
   padding: 0 .25rem 0 .5rem;
   height: 97%;
+  margin: .5rem 0 1.5rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -906,6 +933,7 @@ li {
       grid-template-rows: repeat(3, 1fr);
   height: 65%;
   gap: 1rem;
+  margin-bottom: 2rem;
 }
 
 .contact-container {
@@ -1052,7 +1080,7 @@ label {
 }
 
 label .contact-name {
-  width: 60%;
+  width: 50%;
   height: 2rem;
   -ms-grid-row: 2;
   -ms-grid-row-span: 1;
@@ -1069,15 +1097,29 @@ label .contact-subject {
   height: 2rem;
 }
 
+.label-name {
+  width: 65%;
+}
+
 .imperial-crest {
   position: absolute;
   float: right;
   justify-self: flex-end;
-  margin-right: 3rem;
+  margin-right: 1rem;
   margin-top: 3rem;
   width: 7rem;
   height: 7rem;
   color: #ed2939;
+}
+
+.label-email, .label-name, .label-subject {
+  font-family: voyager-light;
+  font-size: 1.1rem;
+}
+
+.contact-name, .contact-email, .contact-subject {
+  font-family: prototype, Arial, Helvetica, sans-serif;
+  font-size: 1rem;
 }
 
 .label-name {
@@ -1101,6 +1143,8 @@ textarea {
   -ms-grid-row-span: 6;
   grid-row: 4/10;
   height: 100%;
+  font-size: 1.2rem;
+  font-family: prototype, sans-serif;
 }
 
 .contact-btn {
@@ -1131,8 +1175,8 @@ textarea {
 
 .contact-text {
   color: white;
-  font-size: 1.6rem;
-  font-family: voyager-light;
+  font-size: 1.4rem;
+  font-family: prototype, sans-serif;
 }
 
 .form-bg {
@@ -1445,7 +1489,7 @@ textarea {
     height: 3rem;
   }
   .dev-desc-text {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
   }
   .gag-joke {
     font-size: 1.2rem;
@@ -1484,9 +1528,6 @@ textarea {
         -ms-grid-row-align: center;
         align-self: center;
   }
-  .projects-container .overlay {
-    height: 16rem;
-  }
   .projects-container .overlay .overlay-layout {
     padding-left: 5%;
     width: 80%;
@@ -1495,6 +1536,7 @@ textarea {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
+    margin-left: 2rem;
   }
   .projects-container .overlay .overlay-layout .overlay-text {
     font-size: 1.6rem;
@@ -1583,9 +1625,12 @@ textarea {
     height: 6rem;
   }
   .asteroids-container .asteroid:nth-child(11n) {
-    -ms-grid-column: 15;
+    -ms-grid-column: 12;
     -ms-grid-column-span: 2;
-    grid-column: 15/17;
+    grid-column: 12/14;
+    -ms-grid-row: 4;
+    -ms-grid-row-span: 2;
+    grid-row: 4/6;
   }
   .asteroids-container .asteroid:nth-child(11n) .skill {
     width: 5rem;
@@ -1609,6 +1654,7 @@ textarea {
   }
   .dev-desc-border {
     width: 85%;
+    height: 100%;
   }
   .dev-text-container {
     padding: 0 1rem 0 1.5rem;
@@ -1645,6 +1691,32 @@ textarea {
     -ms-grid-row-span: 7;
     grid-row: 4/11;
   }
+  .form-container .contact-name, .form-container .contact-email, .form-container .contact-subject {
+    height: 2.5rem;
+    font-size: 1.2rem;
+    font-family: prototype, sans-serif;
+  }
+  .form-container textarea {
+    font-size: 1.4rem;
+    font-family: prototype, sans-serif;
+  }
+  .form-container .label-email, .form-container .label-subject {
+    margin-left: 10%;
+  }
+  .form-container .label-name {
+    width: 70%;
+    justify-self: flex-start;
+    margin-left: 10%;
+  }
+  .form-container .imperial-crest {
+    margin-right: 6rem;
+  }
+  .form-container .label-email, .form-container .label-name, .form-container .label-subject {
+    font-size: 1.4rem;
+    font-family: voyager-light, Arial, Helvetica, sans-serif;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
   .form-container .contact-btn {
     -ms-grid-row: 11;
     -ms-grid-row-span: 1;
@@ -1652,7 +1724,42 @@ textarea {
   }
 }
 
-@media only screen and (min-width: 1500px) {
+@media only screen and (min-width: 1000px) {
+  .dev-desc-text {
+    font-size: 2.6rem;
+    line-height: 4rem;
+  }
+  .lander-text-container .lander-text {
+    font-size: 1.6rem;
+  }
+  .orbit-page .nav-container .travel-list, .orbit-page .nav-container .nav-list {
+    line-height: 6rem;
+  }
+  .orbit-page .nav-container .nav-item {
+    font-size: 2.6rem;
+  }
+  .form-container {
+    -ms-grid-rows: (5.5rem)[11];
+        grid-template-rows: repeat(11, 5.5rem);
+  }
+  .form-container .contact-btn {
+    width: 7rem;
+    height: 7rem;
+  }
+}
+
+@media only screen and (min-width: 1030px) {
+  body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
   @-webkit-keyframes rumble {
     0% {
       -webkit-transform: rotate(0deg);
@@ -1672,6 +1779,309 @@ textarea {
   #rumble-hover:hover #shuttle {
     -webkit-animation: rumble .0625s infinite linear;
             animation: rumble .0625s infinite linear;
+  }
+  .orbit-page {
+    max-width: 2250px;
+  }
+  .orbit-page .nav-container {
+    margin-top: 2%;
+    margin-left: 2%;
+    gap: 2%;
+  }
+  .orbit-page .nav-container .nav-links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 8%;
+  }
+  .orbit-page .nav-container li {
+    white-space: nowrap;
+  }
+  .orbit-page .nav-container .nav-item {
+    font-size: 2rem;
+  }
+  .orbit-page .celestial-body-container {
+    margin-top: 4.5rem;
+  }
+  .orbit-page .celestial-body-container .moon {
+    width: 100%;
+    max-width: 10rem;
+    margin-bottom: 0;
+  }
+  .orbit-page .main-header-text {
+    font-size: 3.8rem;
+  }
+  .orbit-page .occupation-header-text {
+    font-size: 1.8rem;
+  }
+  .orbit-page .main-page-links img {
+    display: inline-block;
+    width: 5rem;
+    height: 5rem;
+  }
+  .section-title-container {
+    margin: 5% 0 0 3%;
+  }
+  .section-title-container .section-title-text {
+    font-size: 3rem;
+  }
+  .projects-border {
+    max-width: 80%;
+  }
+  .projects-border .project-item .project-heading {
+    font-size: 2.8rem;
+  }
+  .projects-border .project-item .project-title-desc {
+    font-size: 1.8rem;
+    margin-top: 8rem;
+  }
+  .flex-layout-projects {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .flex-layout-projects .projects-container {
+    -ms-flex-preferred-size: 85%;
+        flex-basis: 85%;
+  }
+  .flex-layout-projects .travel-container {
+    -ms-flex-preferred-size: 30%;
+        flex-basis: 30%;
+    margin: 0;
+  }
+  .flex-layout-projects .travel-container .travel-links {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .flex-layout-projects .overlay .overlay-layout {
+    padding-left: 3rem 2rem 3rem 2rem;
+  }
+  .flex-layout-projects .overlay .overlay-layout .overlay-text {
+    font-size: 1.6rem;
+    line-height: 3.5rem;
+  }
+  .flex-layout-projects .overlay:hover {
+    cursor: pointer;
+  }
+  .asteroids-container {
+    -ms-flex-preferred-size: 85%;
+        flex-basis: 85%;
+    width: 100%;
+    max-width: -webkit-fit-content;
+    max-width: -moz-fit-content;
+    max-width: fit-content;
+    -ms-grid-columns: (1fr)[12];
+        grid-template-columns: repeat(12, 1fr);
+    -ms-grid-rows: (1fr)[8];
+        grid-template-rows: repeat(8, 1fr);
+    margin-bottom: 10%;
+  }
+  .asteroids-container .asteroid {
+    max-width: 15rem;
+    max-height: 20rem;
+    -ms-grid-column: 11;
+    -ms-grid-column-span: 2;
+    grid-column: 11/13;
+    -ms-grid-row: 7;
+    -ms-grid-row-span: 2;
+    grid-row: 7/9;
+  }
+  .asteroids-container .asteroid:nth-child(2n) {
+    -ms-grid-column: 9;
+    -ms-grid-column-span: 2;
+    grid-column: 9/11;
+    -ms-grid-row: 7;
+    -ms-grid-row-span: 2;
+    grid-row: 7/9;
+    rotate: 30deg;
+  }
+  .asteroids-container .asteroid:nth-child(2n) .skill2 {
+    width: 4rem;
+    margin-right: 1rem;
+  }
+  .asteroids-container .asteroid:nth-child(3n) {
+    -ms-grid-column: 9;
+    -ms-grid-column-span: 2;
+    grid-column: 9/11;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 2;
+    grid-row: 2/4;
+    rotate: 5deg;
+  }
+  .asteroids-container .asteroid:nth-child(3n) .skill3 {
+    margin-top: .5rem;
+    width: 5rem;
+    rotate: 20deg;
+  }
+  .asteroids-container .asteroid:nth-child(4n) {
+    -ms-grid-column: 8;
+    -ms-grid-column-span: 2;
+    grid-column: 8/10;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 3;
+    grid-row: 3/6;
+    rotate: -8deg;
+  }
+  .asteroids-container .asteroid:nth-child(4n) .skill4 {
+    width: 6rem;
+  }
+  .asteroids-container .asteroid:nth-child(5n) {
+    -ms-grid-column: 11;
+    -ms-grid-column-span: 2;
+    grid-column: 11/13;
+    -ms-grid-row: 5;
+    -ms-grid-row-span: 2;
+    grid-row: 5/7;
+    rotate: 30deg;
+  }
+  .asteroids-container .asteroid:nth-child(6n) {
+    -ms-grid-column: 7;
+    -ms-grid-column-span: 1;
+    grid-column: 7/8;
+    -ms-grid-row: 6;
+    -ms-grid-row-span: 2;
+    grid-row: 6/8;
+    rotate: 40deg;
+  }
+  .asteroids-container .asteroid:nth-child(6n) .skill5 {
+    width: 5rem;
+    background-color: #fff;
+  }
+  .asteroids-container .asteroid:nth-child(7n) {
+    -ms-grid-column: 7;
+    -ms-grid-column-span: 1;
+    grid-column: 7/8;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 2;
+    grid-row: 2/4;
+    rotate: 30deg;
+  }
+  .asteroids-container .asteroid:nth-child(8n) {
+    -ms-grid-column: 6;
+    -ms-grid-column-span: 1;
+    grid-column: 6/7;
+    -ms-grid-row: 4;
+    -ms-grid-row-span: 2;
+    grid-row: 4/6;
+    rotate: 21deg;
+  }
+  .asteroids-container .asteroid:nth-child(8n) .skill7 {
+    margin-top: 1rem;
+    width: 2.5rem;
+  }
+  .asteroids-container .asteroid:nth-child(9n) {
+    -ms-grid-column: 5;
+    -ms-grid-column-span: 1;
+    grid-column: 5/6;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2/3;
+    rotate: 34deg;
+  }
+  .asteroids-container .asteroid:nth-child(9n) .skill8 {
+    margin-right: 1rem;
+    width: 5rem;
+    rotate: 30deg;
+  }
+  .asteroids-container .asteroid:nth-child(10n) {
+    -ms-grid-column: 5;
+    -ms-grid-column-span: 1;
+    grid-column: 5/6;
+    -ms-grid-row: 7;
+    -ms-grid-row-span: 1;
+    grid-row: 7/8;
+    rotate: 34deg;
+  }
+  .asteroids-container .asteroid:nth-child(10n) .skill9 {
+    width: 5rem;
+  }
+  .asteroids-container .asteroid:nth-child(11n) {
+    -ms-grid-column: 4;
+    -ms-grid-column-span: 1;
+    grid-column: 4/5;
+    -ms-grid-row: 4;
+    -ms-grid-row-span: 3;
+    grid-row: 4/7;
+    rotate: 34deg;
+  }
+  .asteroids-container .asteroid:nth-child(11n) .skill10 {
+    width: 6rem;
+    height: 6rem;
+    rotate: 15deg;
+  }
+  .asteroids-container .asteroid:nth-child(12n) {
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 2;
+    grid-column: 3/5;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2/3;
+    rotate: 90deg;
+  }
+  .asteroids-container .asteroid:nth-child(12n) .skill11 {
+    width: 6rem;
+    rotate: -60deg;
+  }
+  .asteroids-container .asteroid:nth-child(13n) {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+    -ms-grid-row: 4;
+    -ms-grid-row-span: 3;
+    grid-row: 4/7;
+  }
+  .asteroids-container .asteroid:nth-child(13n) .skill12 {
+    width: 4rem;
+  }
+  .dev-info-container {
+    -ms-grid-rows: (8%)[12];
+        grid-template-rows: repeat(12, 8%);
+    height: 100%;
+    margin: 0;
+    gap: 2rem;
+  }
+  .dev-info-container .dev-desc-border {
+    max-width: 1000px;
+    -ms-grid-row: 4;
+    -ms-grid-row-span: 9;
+    grid-row: 4/13;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .dev-info-container .dev-desc-text {
+    font-size: 2.4rem;
+    line-height: 3.5rem;
+  }
+  .contact-container {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  .email-container {
+    -ms-flex-preferred-size: 75%;
+        flex-basis: 75%;
+    width: 60%;
+    height: 85%;
+    margin-left: 5%;
+  }
+  .form-container {
+    width: 100%;
+  }
+  .form-container .imperial-crest {
+    margin-right: 3rem;
+  }
+  textarea {
+    height: 75%;
+  }
+  .social-links-container {
+    margin-bottom: 5rem;
   }
 }
 /*# sourceMappingURL=main.css.map */
