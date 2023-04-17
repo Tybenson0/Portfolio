@@ -15,15 +15,15 @@ body {
     );
 }
 @font-face {
-    font-family: 'Voyager-heavy';
-    src: url('/fonts/Voyager\ Heavy\ Webfont.woff') format('woff');
+    font-family: 'voyager-heavy';
+    src: url('/fonts/VoyagerHeavy.woff') format('woff');
 }
 @font-face {
-    font-family: 'Voyager-light';
-    src: url('/fonts/Voyager\ Light\ Webfont.woff') format('woff');
+    font-family: 'voyager-light';
+    src: url('/fonts/VoyagerLight.woff') format('woff');
 }
 @font-face {
-    font-family: 'Prototype';
+    font-family: 'prototype';
     src: url('/fonts/Prototype.woff') format('woff');
 }
 
@@ -633,7 +633,7 @@ li {
 
 .dev-desc-text {
     font-size: 1.8rem;
-    font-family: Prototype;
+    font-family: prototype;
     line-height: 2rem;
     letter-spacing: 1px;
     color: black;
